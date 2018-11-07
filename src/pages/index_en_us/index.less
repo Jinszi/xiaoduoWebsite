@@ -1,0 +1,493 @@
+/* 首页 */
+html, body{
+  font-family: 'RobotoRegular' !important;
+}
+.page-index-container{
+
+  .section-one{
+    .content{
+      width: 1000px;
+      .title{
+        font-family: 'RobotoRegular';
+        font-size: 32px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: normal;
+        line-height: 1.39;
+      }
+      .detail{
+      }
+      .video{
+        .text{
+          font-weight: 900;
+        }
+      }
+
+    }
+  }
+  .section-two{
+    .companyLogosLine{
+      .animateContainer{
+        .line{
+        }
+      }
+      .hoverPanel{
+        .logoLine{
+          img{
+            &+img{
+              margin-left: 42px;
+            }
+          }
+        }
+        .serviceHelped{
+          margin-top: 30px;
+          .text{
+            line-height: 20px;
+            font-size: 14px;
+            .num{
+              font-size: 18px;
+              line-height: 20px;
+            }
+          }
+        }
+      }
+      &:hover{
+        .hoverPanel{
+        }
+      }
+    }
+    >.serviceHelped{
+      margin-top: 34px;
+      .text{
+        line-height: 20px;
+        font-size: 16px;
+        .num{
+          font-size: 18px;
+          line-height: 20px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+  .robot-faq{
+
+    .text-btn{
+      margin-top: 80px;
+    }
+  }
+  .auto-study{
+    .content{
+      .text-btn{
+        margin-top: 60px;
+      }
+    }
+  }
+  .business-docking{
+    .content{
+      .img-area{
+        margin-top: 100px;
+        img{
+          float: right;
+        }
+      }
+      .content-text{
+        margin-top: 99px;
+      }
+      .text-btn{
+        margin-top: 100px;
+      }
+    }
+  }
+  .human-computer{
+    .content{
+      .img-area{
+        margin-top: 100px;
+      }
+      .content-text{
+        margin-top: 130px;
+        padding-left: 30px;
+      }
+      .text-btn{
+        margin-top: 60px;
+      }
+    }
+  }
+  .user-solutions{
+    h2{
+      font-size: 26px;
+      font-weight: normal;
+      text-align: center;
+    }
+    .content{
+      .content-text{
+        margin-top: 100px;
+      }
+      .content-text-right{
+        text-align: right;
+        margin-top: 100px;
+      }
+      .solut-list{
+        margin-top: 70px;
+        height: 140px;
+        .item{
+          width: 100px;
+          float: left;
+          margin-right: 45px;
+          &:nth-of-type(4){
+            margin-right: 0;
+          }
+          &:hover .icon{
+            background-color: rgba(26, 161, 157, .2);
+            transition: all .3s linear;
+            box-shadow: 0px 3px 0 0 #1daba7;
+          }
+          .icon{
+            width: 100px;
+            height: 100px;
+            background-color:rgba(255, 255, 255, .1);
+            text-align: center;
+            line-height: 100px;
+            color: #fff;
+            box-shadow: 0px 3px 0 0 rgba(255, 255, 255, 0.6);
+            transition: all .3s linear;
+            i{
+              font-size: 50px;
+            }
+          }
+          .item-text{
+            font-size: 16px;
+            text-align: center;
+            color: #dddddd;
+            line-height: 1.5;
+            margin-top: 15px;
+          }
+
+        }
+      }
+      .text-btn{
+        margin-top: 110px;
+        &.right{
+          float: right;
+          margin-top: 64px;
+        }
+      }
+    }
+  }
+  .industry-classify{
+    .item{
+      float: left;
+      height: 350px;
+      width: 14.28%;
+      position: relative;
+      filter: grayscale(100%);
+      background-position: center center;
+      background-size:cover;
+      text-align: center;
+      position: relative;
+      top:0;
+      transition: all .3s linear;
+      cursor: default;
+      &.bg1{
+        background-image: url('../../../assets/img/indexPage/industry_bg1.png');
+      }
+      &.bg2{
+        background-image: url('../../../assets/img/indexPage/industry_bg2.png');
+      }
+      &.bg3{
+        background-image: url('../../../assets/img/indexPage/industry_bg3.png');
+      }
+      &.bg4{
+        background-image: url('../../../assets/img/indexPage/industry_bg5.png');
+      }
+      &.bg5{
+        background-image: url('../../../assets/img/indexPage/industry_bg4.png');
+      }
+      &.bg6{
+        background-image: url('../../../assets/img/indexPage/industry_bg7.png');
+      }
+      &.bg7{
+        background-image: url('../../../assets/img/indexPage/industry_bg6.png');
+      }
+      &:hover{
+        filter: grayscale(0%);
+        transition: all .3s linear;
+        top: -15px;
+        box-shadow: 0px 10px 15px 0 rgba(78, 87, 25, 0.35);
+        .more{
+          display: block;
+          &:hover{
+            background: #00aca0;
+            border-color: #00aca0;
+            color: #fff;
+          }
+        }
+        i{
+          font-size: 70px;
+          margin-top: 70px;
+        }
+        .text-cn{
+          margin-top: 20px;
+        }
+        .text-us{
+          margin-top: 10px;
+          opacity: 1;
+        }
+      }
+      i{
+        display: inline-block;
+        font-size: 50px;
+        color: #fff;
+        margin-top: 100px;
+        transition: all .3s linear;
+      }
+      .text-cn{
+        color: #fff;
+        font-size: 18px;
+        margin-top: 25px;
+      }
+      .text-us{
+        opacity: .75;
+        font-size: 14px;
+        color: #fff;
+        margin-top: 15px;
+      }
+      .more{
+        display: none;
+        width: 120px;
+        height: 37px;
+        color:#fff;
+        text-align: center;
+        font-size: 14px;
+        border: solid 1px #ffffff;
+        background: none;
+        margin: 50px auto 0 auto;
+      }
+    }
+  }
+  .map{
+    width: 100%;
+    background-image: url('../../../assets/img/indexPage/map_bg.jpg');
+    height: 766px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    .content{
+      margin: 0 auto;
+      width: 1110px;
+      text-align: center;
+      padding-top: 40px;
+      position: relative;
+      .circular{
+        width: 100px;
+        height: 100px;
+        position: relative;
+        &.animate:before{
+          content: "";
+          display: block;
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          border-radius: 50%;
+          border: 3px solid #1daba7;
+          opacity: 0;
+          animation: ripple 4.5s ease-out 225ms infinite
+        }
+        &:after{
+          content: "";
+          display: block;
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          border-radius: 50%;
+          border: 3px solid #1daba7;
+          opacity: 0;
+          animation: ripple 4.5s ease-out .45s infinite
+        }
+        .circular-two{
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          &::before{
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            border-radius: 50%;
+            border: 3px solid #1daba7;
+            opacity: 0;
+            animation: ripple 4.5s ease-out 675ms infinite
+          }
+          &::after{
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            border-radius: 50%;
+            border: 3px solid #1daba7;
+            opacity: 0;
+            animation: ripple 4.5s ease-out .9s infinite
+          }
+        }
+        .cric{
+          border-radius: 50%;
+          background-color: #1daba7;
+          width: 28px;
+          height: 28px;
+          position: absolute;
+          left: 36px;
+          top:36px
+        }
+      }
+      .beijing{
+        position: absolute;
+        top: 214px;
+        left: 674px;
+        img{
+          position: absolute;
+          left: 71px;
+          top: 41px
+        }
+      }
+      .chengdu{
+        position: absolute;
+        top: 365px;
+        left: 520px;
+        img{
+          position: absolute;
+          left: -10px;
+          top: 39px
+        }
+      }
+      .guangzhou{
+        position: absolute;
+        top: 505px;
+        left: 682px;
+        img{
+          position: absolute;
+          left: 68px;
+          top: 40px;
+        }
+      }
+      .hangzhou{
+        position: absolute;
+        top: 350px;
+        left: 736px;
+        img{
+          position: absolute;
+          left: 69px;
+          top: 39px;
+        }
+      }
+      .xian{
+        position: absolute;
+        top: 295px;
+        left: 591px;
+        img{
+          position: absolute;
+          left: -10px;
+          top: 39px;
+        }
+      }
+    }
+  }
+  .tryout{
+
+    .title-tryout{
+      font-size: 26px;
+      text-align: center;
+      color: #fff;
+      padding: 75px 0 45px 0;
+      font-weight: normal;
+      text-transform: uppercase;
+    }
+    .input-area{
+      text-align: center;
+    }
+  }
+}
+
+@keyframes ripple {
+  0% {
+      opacity: 0;
+      -webkit-transform: scale(.3);
+      transform: scale(.3)
+  }
+
+  5% {
+      opacity: 1
+  }
+
+  to {
+      opacity: 0;
+      -webkit-transform: scale(1);
+      transform: scale(1)
+  }
+}
+
+.section-title{
+  height: auto;
+  font-size: 26px;
+  font-family: 'RobotoRegular' !important;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 16px;
+  &.white{
+    font-size: 26px;
+  }
+}
+.section-prompt{
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.25;
+  margin-bottom: 26px;
+  &.white{
+    color: rgba(255, 2555, 255, .7)
+  }
+}
+.text-list{
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.38;
+  p{
+    &+p{
+      margin-top: 15px;
+    }
+  }
+}
+.title-slogan{
+  font-size: 26px;
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 100px 0 40px 0;
+}
+.tryUse{
+  padding-right: 190px;
+  &.emptyError {
+    &:after{
+      content: 'Please enter your phone number first';
+    }
+  }
+  input{
+    right: 190px;
+  }
+}
+
+.footer .list h6 {
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.footer .list .help{
+  width: 150px;
+  margin-right: 0;
+}

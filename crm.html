@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="renderer" content="webkit">
+    <title>淘阿哥CRM</title>
+    <meta name="description" content="淘阿哥CRM是一款能够帮助淘宝店主自动同步淘宝/天猫店铺订单，核对用户好评信息，标记管理用户属性，并在微信端一键发送返现红包的工具。">
+    <meta name="author" content="@xiaoduotech">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <!-- core-->
+ 
+    <script src="./assets/js/jquery.min.js"></script>
+    <style type="text/css">
+     body{
+      padding: 0;
+      margin: 0;
+      font-size: 14px;
+      color: #000;
+      font-family:caption,"Microsoft YaHei";
+    }
+    .clearfix:after {
+      visibility: hidden;
+      display: block;
+      font-size: 0;
+      content: '';
+      clear: both;
+      height: 0;
+    }
+    .clearfix {
+      *zoom: 1;
+    }
+    * {
+      tap-highlight-color: transparent;
+      -webkit-tap-highlight-color: transparent;
+      -ms-tap-highlight-color: transparent;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
+      .app{
+        width: 1280px;
+        margin: 0 auto;
+      }
+      .block{
+        display: block
+      }
+      .header{
+        position: relative;
+      }
+      .qrcode{
+        position: absolute;
+        top: 153px;
+        right: 185px;
+        width: 136px;
+      }
+      .qqcontact {
+		display: block;
+		position: absolute;
+		bottom: 0px;
+		right: 0px;
+	  }
+      .bd1 {
+		position: relative;
+		font-size: 25px;
+	  }
+	  .bd2 {
+		position: relative;
+		font-size: 26px;
+	  }
+	  .bd1 p, .bd2 p {
+		position: absolute;
+		color: white;
+		font-weight: bold;
+	  }
+	  
+	  .bd2 p {
+		  text-align: center;  
+	  }
+	  .text1 {
+		  top: 262px;
+		  left: 370px;
+	  }
+	  .text2 {
+		  top: 390px;
+		  left: 720px;
+	  }
+	  .text3 {
+		  top: 510px;
+		  left: 440px;
+	  }
+	  .text4 {
+		  top: 630px;
+		  left: 660px;
+	  }
+	  .text5 {
+		  top: 780px;
+		  left: 380px;
+	  }
+	  .text6 {
+		  top: 600px;
+		  left: 290px;
+	  }
+	  .text7 {
+		  top: 600px;
+		  left: 735px;
+	  }
+	  .text8 {
+		  top: 1040px;
+		  left: 290px;
+	  }
+	  .text9 {
+		  top: 1040px;
+		  left: 718px;
+	  }
+	  .bd3 p {
+		  text-align: left;
+	  }
+	  .text10 {
+		  top: 1520px;
+		  left: 318px;
+		  font-size: 25px;
+	  }
+	  .text11 {
+		  top: 1670px;
+		  left: 558px;
+		  font-size: 25px;
+	  }
+	  .text12 {
+		  top: 1860px;
+		  left: 318px;
+		  font-size: 25px;
+	  }
+	  .text13 {
+		  top: 2010px;
+		  left: 408px;
+		  font-size: 25px;
+	  }	  
+	  
+    </style>
+   
+  </head>
+  <body class="home">
+     <div class="app">
+       <div class="header">
+		   <img src="./assets/img/crm/001.jpg" />
+       </div>
+       <div class="footer" style="position: relative;">
+		   <a href="https://cvd.xiaoduoai.com/passport/register" target="_blank" style="display: block;">
+			   <img class="block" src="./assets/img/crm/crm_05.png">
+		   </a>
+		   <a class="qqcontact"  target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=3320960752&site=qq&menu=yes">
+			   <img border="0" src="./assets/img/crm/005.png" />
+		   </a>
+       </div>
+       <div class="bd1">
+		   <img src="./assets/img/crm/002.jpg" />
+		   <p class="text1">客户不好评，店铺DSR低，<br/>宝贝转化率一直得不到提高！</p>
+		   <p class="text2">支付宝、旺旺好评返现风险大，<br/>一不小心就被淘宝罚！</p>
+		   <p class="text3">传统返现耗时耗力、流程复杂，<br/>消耗太多人工成本！</p>
+		   <p class="text4">申请了店铺的公众号，不知道如何增粉，<br/>资源限制不会利用！</p>
+		   <p class="text5">老客户流失严重，找不到方法进行二次营销！</p>
+       </div>
+       <div class="bd2">
+		   <img src="./assets/img/crm/003.jpg" />
+		   <p class="text6">快递包裹放入二维码卡片<br/>提醒用户关注公众号/个人号</p>
+		   <p class="text7">用户好评后关注公众号/个人号<br/>并在提示下输入手机号</p>
+		   <p class="text8">系统自动核对、审核用户<br/>申请，提交好评</p>
+		   <p class="text9">商家一键通过申请<br/>红包自动发送至用户微信</p>
+		   <div class="bd3">
+			   <p class="text10">有了红包的诱惑，用户好评积极性大大提升</p>
+			   <p class="text11">客服不用花大量时间手动发红包，只需点击几下<br/>鼠标，工作即刻完成</p>
+			   <p class="text12">不用再花心思和金钱去进行增粉活动，用户购买后自然成为粉丝</p>
+			   <p class="text13">用户关注微信号，便于店铺动态和营销活动的推送，极大地提升<br/>复购率</p>
+		   </div>
+       </div>
+       
+       <div class="footer" style="position: relative;">
+		   <a href="https://cvd.xiaoduoai.com/passport/register" target="_blank" style="display: block;">
+			   <img class="block" src="./assets/img/crm/crm_05.png">
+		   </a>
+		   <a class="qqcontact"  target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=3320960752&site=qq&menu=yes">
+			   <img border="0" src="./assets/img/crm/005.png" />
+		   </a>
+		   <!--<a class="qqcontact"  target="_blank" href="tencent://message/?uin=3320960752&Site=www.xiaoduotech.com&Menu=yes">
+			   <img border="0" src="./assets/img/crm/005.png" />
+		   </a>-->
+	   </div>
+	   
+<!--       <a href="https://cvd.xiaoduotech.com/?src=15&channel_id=12&key=1e3916388152882324dab168cddd44ee0153f89d8080ab5f73962122cb16caa6" target="_blank"> <img class="block" src="./assets/img/crm/crm_05.png"></a> -->
+
+
+     </div>
+     
+    <!-- !growing IO-->
+<script type='text/javascript'>
+  var _vds = _vds || [];
+  window._vds = _vds;
+  (function(){
+    _vds.push(['setAccountId', '9630a117fa7499aa']);
+    (function() {
+      var vds = document.createElement('script');
+      vds.type='text/javascript';
+      vds.async = true;
+      vds.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'dn-growing.qbox.me/vds.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(vds, s);
+    })();
+  })();
+</script>
+<!-- !Baidu Analytics-->
+<script>
+var _hmt = _hmt || [];
+(function() {
+	var hm = document.createElement("script");
+	hm.src = "https://hm.baidu.com/hm.js?3a41bb492935daa5659b3fe1902fbc6d";
+	var s = document.getElementsByTagName("script")[0]; 
+	s.parentNode.insertBefore(hm, s);
+})();
+</script>
+  </body>
+</html>

@@ -1,0 +1,195 @@
+@import url(../common/reset.less);
+@import url(../../assets/fonts/ionicons/css/ionicons.min.css);
+@import url(../../assets/fonts/font-awesome/css/font-awesome.min.css);
+@import url(../../assets/fonts/cvd_font/iconfont.css);
+@import url(./topBar.less);
+@import url(./rightBar.less);
+@import url(./footer.less);
+@import url(./chooseXiaoDuo.less);
+
+.m-page-container {
+  //min-width: 1212px;
+}
+html,body{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  color: #40475b;
+  padding: 0;
+  margin: 0;
+  font-family: "PingFang SC", "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+
+}
+body{
+  min-width: 1280px;
+  overflow: auto;
+}
+/* reset */
+ul,li,p{
+  margin: 0;
+  padding: 0;
+}
+ul{
+  list-style-type: none;
+}
+* {
+  box-sizing: border-box;
+}
+a{
+  cursor: pointer;
+  text-decoration: none;
+  &:hover{
+    color: #42bcc1;
+  }
+}
+/* helper */
+.f-fl{
+  float: left;
+}
+.f-fr{
+  float: right;
+}
+.hide{
+  display: none;
+}
+.input-phone-1::-webkit-input-placeholder { /* WebKit browsers */
+  color: #40475b !important;
+  font-family: PingFangSC;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.33;
+}
+.input-phone-1:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: #40475b !important;
+  font-family: PingFangSC;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.33;
+}
+.input-phone-1::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: #40475b !important;
+  font-family: PingFangSC;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.33;
+}
+.input-phone-1:-ms-input-placeholder { /* Internet Explorer 10+ */
+  color: #40475b !important;
+  font-family: PingFangSC;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.33;
+}
+.input-phone-2::-webkit-input-placeholder { /* WebKit browsers */
+  font-family: PingFangSC;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  color: rgba(64, 71, 91, 0.2) !important;
+}
+.input-phone-2:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  font-family: PingFangSC;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  color: rgba(64, 71, 91, 0.2) !important;
+}
+.input-phone-2::-moz-placeholder { /* Mozilla Firefox 19+ */
+  font-family: PingFangSC;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  color: rgba(64, 71, 91, 0.2) !important;
+}
+.input-phone-2:-ms-input-placeholder { /* Internet Explorer 10+ */
+  font-family: PingFangSC;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  color: rgba(64, 71, 91, 0.2) !important;
+}
+/* button */
+.btn{
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.3s;
+  &.btn-1{
+    padding: 8px 21px;
+    font-family: PingFangSC;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1;
+    color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
+    border: solid 1px #fff;
+    background-color: rgba(0, 0, 0, 0);
+    &:hover{
+      background-color: #42bbc1;
+      border: 1px solid transparent;
+      cursor: pointer;
+    }
+  }
+  &.btn-2{
+    border: 1px solid rgba(0, 0, 0, 0);
+    padding: 8px 21px;
+    border-radius: 2px;
+    background-color: #00c3cc;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
+    font-family: PingFangSC;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1;
+    color: #fff;
+    &:hover{
+      background-color: #42bbc1;
+      cursor: pointer;
+    }
+  }
+  &.btn-3{
+    height: 50px;
+    border-radius: 2px;
+    background-color: #f6b711;
+    padding: 17px 42px;
+    font-family: PingFangSC;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.8);
+    border: none;
+    &:hover{
+      background-color: #e7ab0f;
+    }
+  }
+  &.btn-4{
+    padding: 18px 56px;
+    height: 60px;
+    background-color: #00c3cc;font-family: PingFangSC;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.33;
+    text-align: center;
+    color: #fff;
+    border: none;
+    &:hover{
+      background-color: #42bbc1;
+    }
+  }
+  &.btn-5{
+    height: 60px;
+    border: solid 1px #fff;
+    padding: 20px 110px;
+    color: #fff;
+    font-family: PingFangSC;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1;
+    background-color: rgba(0, 0, 0, 0);
+    &:hover{
+      color: rgba(0, 0, 0, 0.8);
+      background-color: #e7ab0f;
+      border-color: #e7ab0f;
+    }
+  }
+}

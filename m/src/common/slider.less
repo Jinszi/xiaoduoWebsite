@@ -1,0 +1,41 @@
+/**
+ * Created by lilieming@xiaoduotech.com
+ * Date 2018/7/10
+ * Time 20:29
+ */
+ .m-component-slider{
+   width: 100%;
+   position: relative;
+   overflow: hidden;
+   .slider-list{
+     overflow: hidden;
+     margin-bottom: 30px;
+     >li{
+       float: left;
+       //width: 550px;
+       display: inline-block;
+       margin-left: 40px;
+     }
+   }
+   .slider-controller{
+     display: block;
+     width: 100%;
+     text-align: center;
+     margin-top: 0px;
+     margin-bottom: 18px;
+     line-height: 0;
+      >li{
+        width: 30px;
+        height: 4px;
+        display: inline-block;
+        background-color: #bbbbbb;
+        vertical-align: top;
+        &.active{
+          background-color: #1daba7;
+        }
+        &+li{
+          margin-left: 15px;
+        }
+      }
+   }
+ }

@@ -1,0 +1,497 @@
+.robot-phone {
+  .banner-img {
+    img {
+      width: 500px;
+    }
+  }
+  .phone-robot-err {
+    height: 775px;
+    background-color: #e8f6f6;
+    .phone-errors {
+      margin-top: 40px;
+      .item {
+        width: 355px;
+        height: 209px;
+        background-color: #ffffff;
+        padding-top: 40px;
+        text-align: center;
+        margin-right: 17px;
+        float: left;
+        transition: all 0.3s ease-in-out;
+        cursor: default;
+        &:last-of-type {
+          margin-right: 0;
+        }
+        &:hover {
+          box-shadow: 0px 15px 10px 0 rgba(29, 171, 167, 0.15);
+          transition: all 0.3s ease-in-out;
+          .phone-err-title {
+            color: #ff9900;
+            transition: all 0.3s ease-in-out;
+          }
+          .phone-err-icon-area {
+            .phone-err-icon {
+              margin-top: -100px;
+              transition: all 0.3s ease-in-out;
+            }
+          }
+        }
+        .phone-err-icon-area {
+          height: 55px;
+          width: 55px;
+          overflow: hidden;
+          margin: 0 auto;
+          .phone-err-icon {
+            height: 155px;
+            text-align: center;
+            margin-top: 0px;
+            transition: all 0.3s ease-in-out;
+            i {
+              font-size: 54px;
+              line-height: 55px;
+              color: #888;
+              display: inline-block;
+              &:last-of-type {
+                margin-top: 45px;
+              }
+            }
+          }
+        }
+        .phone-err-title {
+          font-size: 18px;
+          color: #333;
+          margin: 20px 0 10px 0;
+          font-weight: normal;
+        }
+        .phone-err-text {
+          line-height: 1.57;
+          color: #666;
+          font-size: 14px;
+        }
+      }
+    }
+    .phone-step {
+      background-image: url("../../../assets/img/robot_phone/phoneRobot-process-bg.png");
+      background-repeat: no-repeat;
+      background-position: top center;
+      height: 80px;
+      position: relative;
+      margin-top: 40px;
+      .step {
+        font-size: 18px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.22;
+        letter-spacing: normal;
+        color: #ffffff;
+        position: absolute;
+        top: 30px;
+      }
+      .phone-step1 {
+        left: 100px;
+      }
+      .phone-step2 {
+        left: 460px;
+      }
+      .phone-step3 {
+        left: 780px;
+      }
+      .tip {
+        font-size: 14px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.57;
+        letter-spacing: normal;
+        text-align: center;
+        color: #333333;
+        position: absolute;
+        top: 95px;
+      }
+      .phone-step1-tip {
+        left: 110px;
+      }
+      .phone-step2-tip {
+        left: 460px;
+      }
+      .phone-step3-tip {
+        left: 780px;
+      }
+    }
+  }
+  .robot-phone-ability {
+    position: relative;
+    .pg-canvas {
+      position: absolute;
+      left: 0;
+      top: 0px;
+      z-index: -1;
+    }
+  }
+  .robot-advantage {
+    width: 100%;
+    margin-top: 40px;
+    min-width: 1100px;
+    background-image: url("../../../assets/img/robot_phone/advantage-bg.jpg");
+    background-size: cover;
+    height: 480px;
+    .item {
+      width: 25%;
+      float: left;
+      height: 100%;
+      text-align: center;
+      border-right: 1px solid rgba(29, 171, 167, 0.15);
+      position: relative;
+      &:hover {
+        p {
+          opacity: 1;
+          color: #fff;
+        }
+        .robot-voice-play {
+          background-image: url(../../../assets/img/robot_phone/btn-play-default.png);
+        }
+        background: linear-gradient(
+          to top,
+          rgba(41, 171, 166, 0.8),
+          rgba(41, 171, 166, 0.1) 60%
+        );
+      }
+      .icon-area {
+        text-align: center;
+        padding-top: 80px;
+        color: #fff;
+        i {
+          font-size: 64px;
+        }
+      }
+      h5 {
+        font-size: 18px;
+        color: #fff;
+        height: 50px;
+        margin-top: 22px;
+        line-height: 1.56;
+        font-weight: normal;
+      }
+      p {
+        width: 260px;
+        line-height: 1.6;
+        opacity: 0.8;
+        font-size: 14px;
+        text-align: justify;
+        margin: 20px auto 0 auto;
+        color: rgba(255, 255, 255, 0.6);
+      }
+      .robot-voice-play {
+        cursor: pointer;
+        height: 42px;
+        width: 37px;
+        margin: 35px auto 0 auto;
+        background-image: url(../../../assets/img/robot_phone/btn-play-disabled.png);
+        &.disabled {
+          background-image: url(../../../assets/img/robot_phone/btn-play-disabled.png);
+        }
+        &.playing {
+          background-image: url(../../../assets/img/robot_phone/btn-stop.png);
+        }
+      }
+      .robot-voice-playing {
+        display: none;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        font-size: 12px;
+        line-height: 26px;
+        width: 70px;
+        text-align: left;
+        padding-left: 10px;
+        height: 26px;
+        border-radius: 13px;
+        color: #ffaa00;
+        background-color: #202222;
+        .playingAnimate {
+          display: block;
+          right: 9px;
+          top: 10px;
+          width: 10px;
+          height: 8px;
+          > .bar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            display: inline-block;
+            background-color: #ffaa00;
+            width: 2px;
+            animation: playingBarHeightAnimateSmall 1s infinite;
+            &.bar1 {
+              animation-delay: 0s;
+            }
+            &.bar2 {
+              animation-delay: 0.25s;
+              margin-left: 4px;
+            }
+            &.bar3 {
+              animation-delay: 0.5s;
+              margin-left: 8px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .industry-apply-section {
+    height: 715px;
+    background-color: #f5f5f5;
+  }
+  .industry-application {
+    margin-top: 40px;
+    .item {
+      width: 1100px;
+      overflow: hidden;
+      height: 100px;
+      position: relative;
+      z-index: 1;
+      background-color: #ffffff;
+      border: solid 1px #e5e5e5;
+      border-bottom: none;
+      transition: all 0.3s ease;
+      &:last-of-type {
+        border-bottom: 1px solid #e5e5e5;
+      }
+      &:hover {
+        width: 1110px;
+        border-color: transparent;
+        z-index: 5;
+        box-shadow: -10px 0 0 0 #ffaa00, 0 0 15px #ddd;
+        transition: all 0.3s ease;
+        .content {
+          h5 {
+            color: #ffaa00;
+          }
+        }
+        .play-voice-area {
+          .play-voice-tip {
+            display: block;
+          }
+          .robot-voice-play {
+            background-image: url(../../../assets/img/robot_phone/btn-play-default.png);
+          }
+        }
+      }
+      > div {
+        float: left;
+      }
+      .icon-area {
+        line-height: 100px;
+        color: #888;
+        width: 100px;
+        position: relative;
+        float: left;
+        text-align: center;
+        &::before {
+          content: "";
+          height: 40%;
+          width: 1px;
+          position: absolute;
+          right: 0;
+          top: 30%;
+          background: #e5e5e5;
+        }
+        i {
+          font-size: 36px;
+        }
+      }
+      .content {
+        padding-left: 22px;
+        h5 {
+          font-size: 18px;
+          font-weight: normal;
+          color: #333333;
+          margin-top: 30px;
+        }
+        p {
+          font-size: 14px;
+          margin-top: 3px;
+          text-align: left;
+          color: #666666;
+        }
+      }
+      .play-voice-area {
+        float: right;
+        padding-right: 50px;
+        > div {
+          float: left;
+        }
+        .play-voice-tip {
+          display: none;
+          color: #999999;
+          font-size: 12px;
+          margin-right: 10px;
+          line-height: 100px;
+        }
+        .robot-voice-play {
+          cursor: pointer;
+          height: 28px;
+          width: 25px;
+          margin: 35px auto 0 auto;
+          background-size: cover;
+          background-image: url(../../../assets/img/robot_phone/btn-play-default.png);
+          &.disabled {
+            background-image: url(../../../assets/img/robot_phone/btn-play-disabled.png);
+          }
+          &.playing {
+            background-image: url(../../../assets/img/robot_phone/btn-stop.png);
+          }
+        }
+        .robot-voice-playing {
+          display: none;
+        }
+      }
+    }
+  }
+  .robot-phone-more {
+    height: 570px;
+    width: 100%;
+    background-image: url(../../../assets/img/robot_phone/phoneRobot-more-bg.jpg);
+    .phone-robot-title {
+      color: #fff;
+    }
+    .phone-more-list {
+      margin-top: 40px;
+      ul {
+        a {
+          display: inline-block;
+          margin-right: 12px;
+          width: 355px;
+          height: 100px;
+          padding-left: 40px;
+          background-size: cover;
+          border: 1px solid transparent;
+          position: relative;
+          &:first-of-type {
+            background-image: url(../../../assets/img/robot_phone/phoneRobot-more-bg1.jpg);
+          }
+          &:nth-of-type(2) {
+            background-image: url(../../../assets/img/robot_phone/phoneRobot-more-bg2.jpg);
+          }
+          &:last-of-type {
+            background-image: url(../../../assets/img/robot_phone/phoneRobot-more-bg3.jpg);
+            margin-right: 0;
+          }
+          &:hover {
+            p {
+              color: #fff;
+            }
+            i {
+              opacity: 1;
+            }
+            border: 1px solid rgba(255, 255, 255, 0.2);
+          }
+          h5 {
+            font-size: 18px;
+            color: #fff;
+            font-weight: normal;
+            margin: 25px 0 5px 0;
+          }
+          p {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 14px;
+          }
+          i {
+            font-size: 30px;
+            position: absolute;
+            right: 30px;
+            top: 35px;
+            color: #fff;
+            opacity: 0.25;
+          }
+        }
+      }
+    }
+  }
+  .phone-product-compare {
+    margin-top: 15px;
+  }
+  .phone-robot-title {
+    text-align: center;
+    color: #333333;
+    font-size: 30px;
+    font-weight: normal;
+    padding-top: 75px;
+  }
+  .phone-robot-tip {
+    color: #666666;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 5px;
+  }
+  .robot-phone-slogan {
+    font-size: 30px;
+    text-align: center;
+    font-weight: normal;
+    color: #ffffff;
+    margin-top: 100px;
+  }
+  .robot-try-use-area {
+    text-align: center;
+  }
+  .tryout {
+    height: auto;
+  }
+  .playingAnimate {
+    display: block;
+    position: absolute;
+    top: 40px;
+    right: 10px;
+    height: 16px;
+    width: 25px;
+    line-height: 0;
+    font-size: 0;
+    > .bar {
+      display: inline-block;
+      background-color: #ffaa00;
+      animation: playingBarHeightAnimate 1s infinite;
+      width: 3px;
+      height: 3px;
+      vertical-align: baseline;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      &.bar1 {
+        animation-delay: 0s;
+      }
+      &.bar2 {
+        animation-delay: 0.25s;
+        margin-left: 6px;
+      }
+      &.bar3 {
+        animation-delay: 0.5s;
+        margin-left: 12px;
+      }
+    }
+  }
+}
+
+@keyframes playingBarHeightAnimate {
+  0% {
+    height: 5px;
+  }
+  50% {
+    height: 16px;
+  }
+  100% {
+    height: 5px;
+  }
+}
+
+@keyframes playingBarHeightAnimateSmall {
+  0% {
+    height: 3px;
+  }
+  50% {
+    height: 8px;
+  }
+  100% {
+    height: 3px;
+  }
+}

@@ -1,0 +1,10 @@
+<!-- 对移动端和PC分别访问不同的页面 -->
+<script>
+  !function(){
+    if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))){
+//      window.location.href = '/m' + window.location.pathname + window.location.search
+    }else{
+      window.location.href = window.location.href.replace('/m/', '/')
+    };
+  }()
+</script>

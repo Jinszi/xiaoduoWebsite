@@ -1,0 +1,67 @@
+<!-- 一些公用的页面代码，比如说百度统计，google统计等，growingIo统计-->
+
+<!-- !growing IO-->
+<script type='text/javascript'>
+  var _vds = _vds || [];
+  window._vds = _vds;
+  (function(){
+    _vds.push(['setAccountId', '9630a117fa7499aa']);
+    (function() {
+      var vds = document.createElement('script');
+      vds.type='text/javascript';
+      vds.async = true;
+      vds.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'dn-growing.qbox.me/vds.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(vds, s);
+    })();
+  })();
+</script>
+<!-- !Baidu Analytics-->
+<script>
+  // xiaoduoTech百度账号
+  var _hmt = _hmt || [];
+  (function() {
+    var hostBaiduId = ''
+    if(location.host.indexOf('xiaoduotech') !== -1) {
+      hostBaiduId = '7750cda9cae00b96d3e8c64913ca411e'
+    } else if(location.host.indexOf('xiaoduoai') !== -1){
+      hostBaiduId = '621b5b545555cba99ca92624bc5c7c0b'
+    } else {
+      return
+    }
+    var hm = document.createElement('script');
+    hm.src = '//hm.baidu.com/hm.js?' + hostBaiduId;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script>
+<script>
+  // 成都晓多 账号， xiaoduoai.com
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?d0553f760064c485c1b32fe0de92af40";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script>
+
+<script>
+  // 成都晓多 账号， www.xiaoduoai.com/m
+  var _hmt = _hmt || []; (function() { var hm = document.createElement("script"); hm.src = "https://hm.baidu.com/hm.js?1140033c154264abd85679d365babd1d"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s); })();
+</script>
+<script type="text/javascript" charset="utf-8" async src="//lxbjs.baidu.com/lxb.js?sid=11734078"></script>
+
+<!-- 360分析-->
+<script type="text/javascript" src="//s.union.360.cn/208521.js" async defer></script>
+
+<!-- Global site tag (gtag.js) - Google AdWords: 815872850 -->
+<!--
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-815872850"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-815872850');
+</script>-->

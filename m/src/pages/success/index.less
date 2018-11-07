@@ -1,0 +1,115 @@
+.page-success-container{
+  .hoverImages(@i: 1) when (@i < 25) {
+    .bg-img-hover-@{i} {
+     background: url('../../../assets/img/success-page-@{i}@2x.png') no-repeat;
+      background-size: cover;
+      transition: all 0.3s;
+    }
+    .hoverImages(@i + 1)
+  }
+  .hoverImages();
+  .screen-one{
+    padding-top: 100px*2;
+    padding-bottom: 40px*2;
+    background-color: #00c3cc;
+    color: #fff;
+    .targetBox{
+      width: 300px*2;
+      height: 81px*2;
+      border: solid 1px*2 #fff;
+      padding-top: 17px*2;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      .title{
+        font-size: 18px*2;
+        font-weight: 300;
+        line-height: 1;
+        color: #fff;
+      }
+      .target{
+        font-size: 10px*2;
+        font-weight: 300;
+        line-height: 1;
+        color: #fff;
+        margin-top: 16px*2;
+      }
+    }
+    .customerBox{
+      width: 300px*2;
+      margin-top: 31px*2;
+      margin-left: auto;
+      margin-right: auto;
+      .item{
+        margin-top: 16px*2;
+        width: 144px*2;
+        display: inline-block;
+        vertical-align: top;
+        &+.item{
+          margin-left: 11px*2;
+        }
+        .bg-img-first{
+          width: 144px*2;
+          height: 95px*2;
+          display: inline-block;
+        }
+        .name{
+          margin-top: 12px*2;
+          font-size: 10px*2;
+          line-height: 1.1;
+          text-align: left;
+          text-transform: uppercase;
+        }
+        .comment{
+          margin-top: 8px*2;
+          font-size: 9px*2;
+          line-height: 1.22;
+        }
+      }
+    }
+  }
+  .screen-two{
+    background-color: #fafafb;
+    padding-top: 40px*2;
+    padding-bottom: 60px*2;
+    .title{
+      font-size: 12px*2;
+      font-weight: 300;
+      line-height: 1.67;
+      text-align: center;
+      color: #40475b;
+      width: 257px*2;
+      margin: auto;
+      .num{
+        font-weight: 500;
+      }
+    }
+    .partners{
+      width: 246px*2;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 24px*2;
+      line-height: 0;
+      font-size: 0;
+      ul{
+        &+ul{
+          margin-top: 2px*2;
+        }
+        li{
+          display: inline-block;
+          width: 60px*2;
+          height: 60px*2;
+          vertical-align: top;
+
+          &+li{
+            margin-left: 2px*2;
+          }
+          &:first-child{
+            margin-left: 0;
+          }
+        }
+      }
+
+    }
+  }
+}

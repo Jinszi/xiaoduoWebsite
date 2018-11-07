@@ -1,0 +1,294 @@
+/**
+ * Created by lilieming@xiaoduotech.com
+ * Date 2018/3/6
+ * Time 10:23
+ */
+ 
+ .footer{
+     background: #283030;
+     position: relative;
+     width: 100%;
+     overflow: hidden;
+     .footer-container{
+         width: 1920px;
+        position: absolute;
+        left: 50%;  
+        margin-left: -960px;
+     }
+     .content{
+         width: 1200px;
+         height: 240px;
+         position: relative;
+         z-index: 10;
+         width: 1100px;
+         margin: 0 auto;
+     }
+     .footer-mask{
+         width: 730px;
+         height: 280px;
+         position: absolute;
+         right: 0;
+         top: 0;
+         background-color: #2f3838;
+         
+     }
+     .list{
+         padding-top: 60px;
+         &>div{
+             float: left;
+         }
+         h6{
+            color: rgba(255,255,255,.5);
+            font-size: 16px;
+            margin-bottom: 25px;
+         }
+         .product{
+            width: 160px;
+            ul {
+              margin-top: -9px;
+            }
+         }
+         .help{
+            width: 145px;
+            ul {
+               margin-top: -9px;
+            }
+         }
+         .about-me{
+             width: 135px;
+             ul {
+               margin-top: -9px;
+             }
+         }
+        .certification{
+          width: 320px;
+          .line{
+            position: relative;
+            padding-left: 54px;
+            min-height: 44px;
+            overflow: hidden;
+            &+.line{
+              margin-top: 20px;
+            }
+            .avatar{
+              position: absolute;
+              width: 44px;
+              height: 44px;
+              top: 0;
+              left: 0;
+              border: solid 1px #333d3d;
+              text-align: center;
+              i{
+                font-size: 32px;
+                line-height: 42px;
+                color: #fff;
+              }
+
+            }
+            .title{
+              font-size: 14px;
+              color: #fff;
+              line-height: 1;
+              margin-top: 5px;
+              &:hover{
+                color: #1daba7;
+              }
+            }
+            .en{
+              color: rgba(255, 255, 255, 0.5);
+              line-height: 1;
+              margin-top: 8px;
+              font-size: 12px;
+            }
+          }
+        }
+         .wx,
+         .weibo{
+             width: 88px;
+             margin-right: 60px;
+         }
+         .contact-us{
+             text-align: left;
+             margin-left: 70px;
+             h6{
+                margin-bottom: 20px;
+             }
+             .phone{
+                 margin-bottom: 10px;
+                 font-size: 30px;
+                 font-family: DIN_Medium;
+                 color: #fff;
+                 i{
+                     font-size: 30px;
+                     margin-right: 10px;
+                 }
+             }
+
+             .work-time{
+                font-size: 14px;
+                color: rgba(255,255,255,.5);
+                margin-bottom: 21px;
+            }
+             .email{
+                 font-size: 14px;
+                 margin-top: 10px;
+                 color: #fff;
+                 a {
+                   color: #fff;
+                 }
+                 a:hover {
+                   color: #1daba7;
+                 }
+             }
+           .companyPhone{
+             color: #fff;
+             margin-top: 10px;
+             font-size: 14px;
+             .num{
+               font-family: DIN_Medium;
+             }
+           }
+           .cooperation{
+             color: #fff;
+             margin-top: 10px;
+             font-size: 14px;
+             .num{
+               font-family: DIN_Medium;
+             }
+           }
+         }
+         li{
+            line-height: 30px;
+             a{
+                 color: #fff;
+                 font-size: 14px;
+             }
+             a:hover {
+               color: #1daba7;
+             }
+         }
+     }
+     .friendship-link{
+         margin-top: 40px;
+         border: 1px solid #1e2424;
+         height: 51px;
+         background-color: #252c2c;
+         line-height: 51px;
+         border-left: none;
+         text-align: center;
+         border-right: none;
+         h6{
+             font-size: 12px;
+             color: rgba(255,255,255,.4);
+             margin-right: 25px;
+             display: inline;
+         }
+         ul{display: inline}
+         li{
+             display: inline;
+             margin-right: 20px;
+             font-size: 12px;
+             a{
+                color: rgba(255,255,255,.6);
+             }
+             a:hover {
+               color: #1daba7;
+             }
+         }
+     }
+     small{
+         color: rgba(255,255,255,.5);
+       a{
+         color: rgba(255,255,255,.5);
+       }
+       a:hover{
+         color:#1daba7;
+       }
+     }
+     .copyright{
+        display: block;
+        background-color: #252c2c;
+        font-size: 12px;
+        height: 60px;
+        line-height: 60px;
+        .content{
+            small{
+                float: left;
+                &:nth-of-type(2){
+                    float: right;
+                }
+            }
+        }
+     }
+
+   .wxAndWeibo{
+     margin-top: 20px;
+     .itemWrap{
+       display: inline-block;
+       position: relative;
+       &+.itemWrap{
+         margin-left: 28px;
+       }
+       .text{
+         &a{
+           &:hover{
+             color: #1daba7;
+           }
+         }
+         display: inline-block;
+         color: #fff;
+         font-size: 14px;
+         i{
+          font-size: 18px;
+           line-height: 1;
+           margin-right: 5px;
+           color: #fff;
+         }
+         &:hover{
+           color: #1daba7;
+           i{
+             color: #1daba7;
+           }
+         }
+       }
+       &:hover{
+         .hoverPanel{
+           display: block;
+         }
+       }
+       .hoverPanel{
+         display: none;
+         position: absolute;
+         bottom: 40px;
+         left: 50%;
+         transform: translateX(-50%);
+         width: 140px;
+         padding: 5px;
+         padding-bottom: 15px;
+         background-color: #fff;
+         text-align: center;
+         border-radius: 2px;
+         &:after{
+          content: '';
+           display: inline-block;
+           border: 8px solid transparent;
+           border-top-color: #fff;
+           position: absolute;
+           bottom: -16px;
+           left: 50%;
+           transform: translateX(-50%);
+         }
+         img{
+           max-width: 100%;
+         }
+         .imgTip{
+           color: #666666;
+           font-size: 12px;
+           line-height: 20px;
+         }
+       }
+     }
+
+
+   }
+ }

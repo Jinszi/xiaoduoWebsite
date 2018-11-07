@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="96px" height="96px" viewBox="0 0 96 96" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 3.6.1 (26313) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 4</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="Desktop-HD" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="官网-MS-子页面" transform="translate(-697.000000, -938.000000)">
+            <g id="Group-4" transform="translate(697.000000, 938.000000)">
+                <rect id="Rectangle-211" x="0" y="0" width="96" height="96"></rect>
+                <g id="bullish" transform="translate(8.000000, 6.000000)">
+                    <g id="Group" transform="translate(0.000000, 26.000000)" fill="#4CAF50">
+                        <rect id="Rectangle-path" x="72" y="0" width="8" height="46"></rect>
+                        <rect id="Rectangle-path" x="60" y="14" width="8" height="32"></rect>
+                        <rect id="Rectangle-path" x="48" y="4" width="8" height="42"></rect>
+                        <rect id="Rectangle-path" x="36" y="16" width="8" height="30"></rect>
+                        <rect id="Rectangle-path" x="24" y="22" width="8" height="24"></rect>
+                        <rect id="Rectangle-path" x="12" y="18" width="8" height="28"></rect>
+                        <rect id="Rectangle-path" x="0" y="26" width="8" height="20"></rect>
+                    </g>
+                    <g id="Group" transform="translate(1.000000, 0.000000)" fill="#388E3C">
+                        <path d="M71.2,2.2 L59,14.4 L51,6.4 L31,26.4 L21,16.4 L0.2,37.2 L5.8,42.8 L21,27.6 L31,37.6 L51,17.6 L59,25.6 L76.8,7.8 L71.2,2.2 Z" id="Shape"></path>
+                        <path d="M79,0 L61,0 L79,18 L79,0 Z" id="Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

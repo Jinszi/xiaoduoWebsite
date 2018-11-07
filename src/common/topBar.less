@@ -1,0 +1,132 @@
+/* 顶栏，多个页面通用 */
+.m-topBar{
+  height: 75px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(64, 71, 91, 0.8);
+  padding: 18px 0px 18px 0px;
+  color: #fff;
+  transition: all 0.3s;
+  z-index:10;
+  overflow: visible;
+  .content{
+    position: relative;
+    max-width: 1280px;
+    width: 100%;
+    min-width: 1001px;
+    margin: auto;
+  }
+
+  &.top{
+    background-color: rgba(0, 0, 0, 0);
+  }
+  .nav{
+    margin-right: 40px;
+    margin-top: 5px;
+    position: relative;
+    > ul{
+      padding: 0;
+      margin: 0;
+      height: 36px;
+      >li{
+        display: inline-block;
+        margin-left: 30px;
+        font-family: PingFangSC;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 36px;
+        height: 36px;
+        position: relative;
+        vertical-align: top;
+        @media(min-width: 1050px){
+          >a{
+            width: 210px;
+          }
+        }
+        >a{
+          font-size: 18px;
+          color: #fefefe;
+          line-height: 36px;
+          display: inline-block;
+          vertical-align: top;
+          &:hover{
+            color: #fff;
+            font-weight: 500;
+          }
+        }
+        &:hover {
+          /*color: #42bcc1;*/
+        }
+        &:hover .hoverUp{
+          display: block;
+        }
+        .hoverUp{
+          display: none;
+          position: absolute;
+          //bottom: -156px;
+          top: 36px;
+          left: -50px;
+          width: 176px;
+          color: #40475b;
+          border-radius: 4px;
+          background-color: rgba(255, 255, 255, 0.8);
+          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+          overflow: hidden;
+          z-index: 10;
+          &.hoverUp-1{
+            width: 96px;
+            left: -12px;
+            bottom: -156px;
+          }
+          .item{
+            font-family: PingFangSC;
+            font-size: 14px;
+            font-weight: 300;
+            color: #40475b;
+            height: 52px;
+            line-height: 52px;
+            //padding-left: 24px;
+            text-align: center;
+            &:hover{
+              background-color: #42bbc1;
+              color: #fff;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+  .ops{
+    position: relative;
+    top: 5px;
+    button + button{
+      margin-left: 20px;
+    }
+  }
+  .phone{
+    margin-left: 31px;
+    display: inline-block;
+    line-height: 39px;
+    vertical-align: top;
+    position: relative;
+    top: 2px;
+    font-size: 18px;
+    font-weight: 300;
+    font-family: PingFangSC;
+  }
+
+  @media(max-width: 1150px) {
+    .phone{
+      margin-left: 10px;
+    }
+    .nav > ul > li {
+      margin-left: 5px;
+    }
+    .nav{
+      margin-right: 15px;
+    }
+  }
+}

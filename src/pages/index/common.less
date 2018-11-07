@@ -1,0 +1,88 @@
+/**
+ * Created by lilieming@xiaoduotech.com
+ * Date 2018/3/6
+ * Time 10:22
+ */
+@import url(../../common/reset.less);
+@import url(../../../assets/fonts/indexPageFontIcon/iconfont.css);
+@import url(../../../assets/fonts/cvd_font/iconfont.css);
+@import url(../../../assets/fonts/webFont/DIN_Medium/index.less);
+@import url(../../../assets/fonts/webFont/fzruizhengheis/index.less);
+@import url(../../../assets/fonts/webFont/Roboto/index.less);
+
+.m-page-container {
+  //min-width: 1212px;
+}
+
+
+html,body{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  color: #40475b;
+  padding: 0;
+  margin: 0;
+  font-family:  "Open Sans","PingFang SC","Microsoft YaHei","Helvetica Neue","Hiragino Sans GB","WenQuanYi Micro Hei",Arial,sans-serif;
+}
+body{
+  min-width: 1100px;
+  overflow: auto;
+}
+/* reset */
+ul,li,p{
+  margin: 0;
+  padding: 0;
+}
+ul{
+  list-style-type: none;
+}
+* {
+  box-sizing: border-box;
+}
+a{
+  cursor: pointer;
+  text-decoration: none;
+  &:hover{
+    color: #42bcc1;
+  }
+}
+/* helper */
+.f-fl{
+  float: left;
+}
+.f-fr{
+  float: right;
+}
+.hide{
+  display: none !important;
+}
+.hidden{
+  visibility: hidden !important;
+}
+
+::-webkit-scrollbar {width:12px;}
+
+::-webkit-scrollbar-track {
+  background-color: #e5e5e5;
+  border-left: 1px solid #aaaaaa;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #aaaaaa;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #888888;
+}
+::-webkit-scrollbar-track {
+  border-radius: 0;
+  box-shadow: none;
+  border: 0;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 0;
+  box-shadow: none;
+  border: 0;
+}
+
+
+::selection {color:#fff;background-color:#11c1bb;}
+::-moz-selection {color:#fff;background-color:#11c1bb;}

@@ -1,0 +1,112 @@
+.page-success-container{
+  .hoverImages(@i: 1) when (@i =< 25) {
+    .bg-img-hover-@{i} {
+     background: url('../../../assets/img/page_success_hover_@{i}.png') no-repeat;
+      filter: grayscale(100%);
+      transition: all 0.3s;
+      &:hover{
+        //background: url('../../../assets/img/page_success_hover_@{i}.png') no-repeat;
+        filter: grayscale(0%);
+      }
+    }
+    .hoverImages(@i + 1)
+  }
+  .hoverImages();
+  .screen-one{
+    padding-top: 150px;
+    background-color: #00c3cc;
+    height: 840px;
+    color: #fff;
+    .targetBox{
+      width: 980px;
+      height: 240px;
+      border: solid 1px #fff;
+      padding-top: 72px;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      .title{
+        font-size: 48px;
+        font-weight: 300;
+        line-height: 1;
+        color: #fff;
+      }
+      .target{
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 1;
+        color: #fff;
+        margin-top: 40px;
+      }
+    }
+    .customerBox{
+      width: 982px;
+      margin-top: 31px;
+      margin-left: auto;
+      margin-right: auto;
+      .item{
+        width: 230px;
+        display: inline-block;
+        vertical-align: top;
+        &+.item{
+          margin-left: 20px;
+        }
+        .bg-img-first{
+          width: 230px;
+          height: 140px;
+          display: inline-block;
+        }
+        .name{
+          margin-top: 16px;
+          font-size: 18px;
+          line-height: 1;
+          text-align: center;
+          text-transform: uppercase;
+        }
+        .comment{
+          margin-top: 28px;
+          font-size: 14px;
+          line-height: 1.71;
+        }
+      }
+    }
+  }
+  .screen-two{
+    height: 889px;
+    background-color: #fafafb;
+    padding-top: 118px;
+    .title{
+      font-size: 32px;
+      font-weight: 300;
+      line-height: 1.5;
+      text-align: center;
+      color: #40475b;
+      width: 972px;
+      margin: auto;
+      .num{
+        font-weight: 500;
+      }
+    }
+    .partners{
+      width: 1002px;
+      background-color: #c1c3ca;
+      margin: 70px auto 163px auto;
+      padding: 12px;
+      ul{
+        &+ul{
+          margin-top: 2px;
+        }
+        li{
+          display: inline-block;
+          width: 138px;
+          height: 138px;
+          vertical-align: top;
+          &+li{
+            margin-left: 2px;
+          }
+        }
+      }
+
+    }
+  }
+}

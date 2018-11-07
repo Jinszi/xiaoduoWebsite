@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-Hans" class="chat-html">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="renderer" content="webkit">
+    <title>晓多客服机器人——会学习的机器人，知晓更多</title>
+    <meta name="description" content="晓多客服机器人，模拟真人的智能客服。秒速应答，提升客户满意度和转化率。基于机器学习技术，知晓更多。">
+    <meta name="author" content="@xdfe">
+    <!-- core-->
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css?1480402785834">
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js?1480402785834"></script>
+    <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js?1480402785834"></script>
+    <!-- customize-->
+    <link rel="stylesheet" href="//cdn.bootcss.com/ionicons/2.0.1/css/ionicons.min.css?1480402785834">
+    <link rel="stylesheet" href="./scripts/pages/anti-spam/style.css?1480402785834">
+  </head>
+  <body class="chat-body">
+    <div id="xd-anti-spam">
+      <div id="xd-anti-spam-widget" v-bind:style="widgetStyle" class="initHidden">
+        <div class="chat-wrapper">
+          <div class="header">
+            <h4 class="title">Anti-Spam Demo
+              <div class="manuBtn"><span id="minimize-chat-box" v-on:click="minimize" class="ion-minus"></span><span id="close-chat-box" v-on:click="openQuitDlg" class="ion-close"></span></div>
+            </h4>
+          </div>
+          <input v-model="pin" placeholder="pin" class="xd-anti-spam-pin input-content">
+          <input style="display:none;" placeholder="spin" class="xd-anti-spam-span">
+          <div id="xd-anti-spam-chat-box-content" class="msgPool">
+            <ul class="msgList">
+              <li v-bind:class="{ 'custom-service':(msg.identity==='custom-service') , 'client' : (msg.identity==='client') , 'spam':msg.spam_stat==='IS_SPAM' , 'unknown_spam':msg.spam_stat==='UNKNOWN' , 'answer_null' : msg.is_answer_null }" v-for="msg in MsgPool" class="msgItem"><img src="./scripts/pages/anti-spam/icons/icon-16-dark.svg" v-if="msg.identity==='custom-service'" class="avatar">
+                <div class="msgItem-wrapper">
+                  <div class="msgItem-body">
+                    <div class="text">
+                      <div class="block">{{ msg.content }}</div>
+                    </div>
+                    <div class="decoration-dot">
+                      <div class="base"></div>
+                      <div class="mask"></div>
+                    </div>
+                  </div>
+                  <div class="extra-info"><span class="name">{{ msg.identity_desc }} {{ msg.name }}</span>· <span class="time">{{ msg.time }}</span></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="msg-send-panel">
+            <textarea id="xd-anti-spam-chat-box-msg" placeholder="输入信息，回复的答案气泡颜色含义：红——为垃圾信息；绿色——非垃圾信息；浅灰色；无法判定是否为垃圾信息。回复的答案文字颜色含义：黑色——正常答案；白色：该问题无对应回答" v-model="inputContent" v-on:keydown="sendMsg" v-on:focus="onInputFocused" v-on:blur="onInputBlur" class="input-content"></textarea>
+          </div>
+          <div class="tips"><span v-if="inputFocused">按下回车键即可发送</span><span v-if="!inputFocused"> <img src="./scripts/pages/anti-spam/icons/icon-16-dark.svg" class="logo-icon">晓多</span></div>
+        </div>
+        <div id="xd-anti-spam-confirm-dlg" v-if="quitDlgShow">
+          <div class="dlg-body">
+            <h3 class="title">结束对话</h3>
+            <p>您确定要关闭对话吗？</p>
+            <div class="btn-group">
+              <button v-on:click="hideQuitDlg" class="btn cancel">取消</button>
+              <button v-on:click="quit" class="btn confirm">确定</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="xd-anti-spam-btn" v-on:click="open" v-bind:style="btnStyle"><span v-bind:class="{ 'ion-chatbubble' : !chating , 'ion-chatbubble-working' : chating }"></span></div>
+    </div>
+    <script src="//cdn.bootcss.com/es6-promise/3.2.1/es6-promise.min.js"></script>
+    <script src="//cdn.bootcss.com/vue/1.0.17/vue.min.js"></script>
+    <script src="//g.alicdn.com/aliww/h5.imsdk/2.1.0/scripts/yw/wsdk.js"></script>
+    <script src="//cdn.bootcss.com/moment.js/2.11.2/moment.min.js"></script>
+    <script src="//cdn.bootcss.com/require.js/2.1.22/require.min.js" data-main="./scripts/pages/anti-spam/anti-spam.js"></script>
+  </body>
+</html>

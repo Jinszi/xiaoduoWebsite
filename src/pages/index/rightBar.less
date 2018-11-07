@@ -1,0 +1,273 @@
+/**
+ * Created by lilieming@xiaoduotech.com
+ * Date 2018/3/6
+ * Time 10:22
+ */
+
+/* 右侧悬浮栏 */
+#cvd-open{
+  display: none;
+}
+
+ .m-rightBar{
+   position: fixed;
+   top: 50%;
+   transform: translateY(-162px);
+   right: 15px;
+   font-size: 0;
+   line-height: 0;
+   z-index: 2;
+   .onlineChat{
+     cursor: pointer;
+     img{
+       display: none;
+     }
+     .default{
+       display: inline-block;
+     }
+     &:hover{
+       .default{
+         display: none;
+       }
+       .hover{
+         display: inline-block;
+       }
+     }
+   }
+   .m-right-tryUse{
+     margin-top: 5px;
+     cursor: pointer;
+     img{
+       display: none;
+     }
+     .default{
+       display: inline-block;
+     }
+     &:hover{
+       .default{
+         display: none;
+       }
+       .hover{
+         display: inline-block;
+       }
+     }
+     &.onScroll{
+        .default{
+          display: none;
+        }
+       .hover{
+         display: none;
+       }
+       .default_scroll{
+         display: inline-block;
+       }
+       &:hover{
+         .default_scroll{
+           display: none;
+         }
+         .hover_scroll{
+           display: inline-block;
+         }
+       }
+     }
+   }
+   .toTopBtn{
+     margin-top: 10px;
+     cursor: pointer;
+     &:hover{
+       opacity: 1;
+     }
+   }
+ }
+
+ .tryUseModalMask{
+   width: 100%;
+   height: 100%;
+   background: rgba(0, 0, 0, .3);
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 1000;
+   text-align: center;
+   &:before{
+     content: '';
+     display: inline-block;
+     height: 100%;
+     width: 1px;
+     vertical-align: middle;
+   }
+   .tryUsePhoneInputModal{
+     display: inline-block;
+     vertical-align: middle;
+     width: 480px;
+     min-height: 320px;
+     background: #fff;
+     box-shadow: 0px 15px 15px 0 rgba(0, 0, 0, 0.3);
+     position: relative;
+     .close{
+       position: absolute;
+       right: 15px;
+       top: 15px;
+       font-size: 14px;
+       color: #999;
+       cursor: pointer;
+       i{
+         font-size: 14px;
+       }
+       &:hover{
+         color: #e55;
+         -webkit-transition: -webkit-transform .4s ease-out;
+         transition: -webkit-transform .4s ease-out;
+         transition: transform .4s ease-out;
+         transition: transform .4s ease-out,-webkit-transform .4s ease-out;
+         -webkit-transform: rotate(1turn);
+         transform: rotate(1turn);
+       }
+     }
+     .content{
+       text-align: center;
+       padding: 30px 30px 60px;
+       .inputEmptyTip{
+         font-size: 14px;
+         color: #ee5555;
+         line-height: 1;
+         margin-top: 10px;
+         margin-bottom: -4px;
+         text-align: center;
+         &.hidden{
+           visibility: hidden;
+         }
+       }
+       .title{
+         font-size: 20px;
+         line-height: 1;
+         color: #f80;
+       }
+       .phone-number{
+         font-size: 14px;
+         line-height: 1;
+         margin-top: 10px;
+         color: #999999;
+         span {
+           font-family: DIN_Medium;
+         }
+       }
+       .splitLine{
+         margin-top: 20px;
+         background-color: #eeeeee;
+         height: 1px;
+       }
+       .try-use-input{
+         margin-top: 50px;
+         line-height: 50px;
+         width: 300px;
+         height: 50px;
+         background: none;
+         box-shadow: 0 2px 0 0 #1daba7;
+         border: none;
+         color: #333;
+         font-size: 16px;
+         text-align: center;
+       }
+       .try-use-btn{
+         display: inline-block;
+         margin-top: 20px;
+         width: 300px;
+         height: 44px;
+         background-color: #1daba7;
+         text-align: center;
+         cursor: pointer;
+         text-decoration: none;
+         font-size: 16px;
+         line-height: 1;
+         color: #ffffff;
+         border: none;
+         font-family: "Open Sans", "PingFang SC", "Microsoft YaHei", "Helvetica Neue", "Hiragino Sans GB", "WenQuanYi Micro Hei", Arial, sans-serif;
+         font-weight: bold;
+         &:hover{
+           color: #fff;
+           background: #1ab4aa;
+         }
+         &:active {
+           background: #009a90;
+         }
+       }
+     }
+   }
+
+   .tryUseSuccessModal{
+     width: 480px;
+     height: 320px;
+     background-color: #ffffff;
+     box-shadow: 0px 15px 15px 0 rgba(0, 0, 0, 0.3);
+     padding: 15px;
+     padding-top: 68px;
+     display: inline-block;
+     vertical-align: middle;
+     position: relative;
+     .close{
+       position: absolute;
+       right: 15px;
+       top: 15px;
+       font-size: 14px;
+       color: #999;
+       cursor: pointer;
+       i{
+         font-size: 14px;
+       }
+       &:hover{
+         color: #1daba7;
+       }
+     }
+     .content{
+       text-align: center;
+       position: relative;
+
+       .title{
+         font-size: 20px;
+         line-height: 1;
+         text-align: center;
+         color: #ff9900;
+       }
+       .text{
+         margin-top: 20px;
+         font-size: 14px;
+         line-height: 24px;
+         color: #666;
+       }
+       .modal-btn{
+         display: inline-block;
+         width: 300px;
+         height: 44px;
+         background-color: #1daba7;
+         text-align: center;
+         cursor: pointer;
+         text-decoration: none;
+         font-size: 14px;
+         color: #ffffff;
+         margin-top: 70px;
+         border: none;
+         position: relative;
+         &:hover{
+           color: #fff;
+           background: #1ab4aa;
+           .arrow{
+             right: 10px;
+           }
+         }
+         .arrow{
+           position: absolute;
+           right: 20px;
+           transition: all ease 0.3s;
+           color: #fff;
+           font-size: 16px;
+           top: 14px;
+           line-height: 1;
+         }
+       }
+
+     }
+   }
+ }
+
+ 

@@ -1,0 +1,35 @@
+
+@font-face {font-family: "cvd-icon";
+  src: url('iconfont.eot?t=1497930212962'); /* IE9*/
+  src: url('iconfont.eot?t=1497930212962#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1497930212962') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1497930212962') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1497930212962#cvd-icon') format('svg'); /* iOS 4.1- */
+}
+
+.cvd-icon {
+  font-family:"cvd-icon" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.cvd-robot:before { content: "\e606"; }
+
+.cvd-channel:before { content: "\e60d"; }
+
+.cvd-logo:before { content: "\e613"; }
+
+.cvd-custom:before { content: "\e614"; }
+
+.cvd-official:before { content: "\e615"; }
+
+.cvd-user-setting:before { content: "\e618"; }
+
+.cvd-logo-txt:before { content: "\e61b"; }
+
+.cvd-icon-test:before { content: "\e621"; }
+
+.cvd-icon-test1:before { content: "\e622"; }
+

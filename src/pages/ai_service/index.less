@@ -1,0 +1,180 @@
+.ai-channel{
+    padding-top: 60px;
+    height: 400px;
+    .container{
+        >div{
+            float: left;
+            &.ai-channel-img{
+                margin-left: 205px;
+            }
+        }
+    }
+
+}
+section{
+    &:hover .ai-btn{
+        transition: all .3s linear;
+        border-color: #1daba7;
+        i{
+            visibility: visible;
+        }
+    }
+    .ai-btn{
+        margin-top: 30px;
+        border-color: transparent;
+        background:none;
+        color: #1daba7;
+        transition: all .3s linear;
+        i{
+            visibility: hidden;
+        }
+        &:hover{
+            background-color: #1daba7;
+            color: #fff;
+            
+        }
+    }
+}
+
+.func-list{
+    li{
+        font-size: 14px;
+        color: #666;
+        line-height: 2.14;
+        i{
+            margin-right: 10px;
+            color: #999;
+            font-size: 14px;
+        }
+    }
+}
+.ai-cooperation{
+    height: 440px;
+    background-color: #f6f6f6;
+    .container{
+        padding-top: 80px;
+        >div{
+            float: left;
+            &.ai-coop-img{
+                margin-left: 15px;
+                margin-right: 240px;
+            }
+            &.content{
+
+            }
+        }
+        
+    }
+}
+.ai-section-tilte{
+    font-size: 30px;
+    color: #333;
+    text-align: left;
+    font-weight: 700;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #eee;
+    display: inline-block;
+    margin-bottom: 20px;
+    font-family: PingFangSC,helvetica neue,microsoft yahei ui,microsoft yahei,simsun,"sans-serif"!important;
+    span{
+        font-weight: 300;
+    }
+}
+.ai-introduce{
+    height: 401px;
+    background: #f6f6f6;
+    padding-top: 70px;
+    .items{
+        .item{
+            float: left;
+            width: 360px;
+            height: 260px;
+            background-color: #fff;
+            transition: all .3s linear;
+            text-align: center;
+            cursor: default;
+            margin-right: 10px;
+            &:last-of-type{
+                margin-right: 0;
+            }
+            &.item1 {
+                .ai-introduce-icon {
+                    background-position: 0px 0;
+                }
+                &:hover {
+                    .ai-introduce-icon {
+                        background-position: -85px 0;
+                    }
+                }
+            }
+
+            &.item2 {
+                .ai-introduce-icon {
+                    background-position: -170px 0;
+                }
+                &:hover {
+                    .ai-introduce-icon {
+                        background-position: -255px 0;
+                    }
+                }
+            }
+
+            &.item3 {
+                .ai-introduce-icon {
+                    background-position: -340px 0;
+                }
+                &:hover {
+                    .ai-introduce-icon {
+                        background-position: -425px 0;
+                    }
+                }
+            }
+            &:hover{
+                box-shadow: 0px 10px 20px 0 rgba(0, 0, 0, 0.1);
+                transform: translate(0px, -4px);
+                transition: all .3s linear;
+                .title{
+                    font-weight: bolder;
+                }
+                p{
+                    color: #666;
+                }
+            }
+            .title{
+                color: #333333;
+                font-size: 18px;
+                margin-top: 15px;
+                font-weight: 400;
+            }
+            .ai-introduce-icon{
+                margin-top: 30px;
+                display: inline-block;
+                width: 85px;
+                height: 96px;
+                background-image: url('../../../assets/img/ai_service/workbench-feature-icons.png');
+            }
+            p{
+                font-size: 14px;
+                margin: 0 auto;
+                width: 295px;
+                text-align: left;
+                margin-top: 15px;
+                color: #999;
+                line-height: 1.57;
+            }
+        }
+    }
+}
+
+.move-img{
+    position: relative;
+    top: 500px;
+    transition: all .4s linear;
+    visibility: hidden;
+}
+.ems{
+    background-image: url('../../../assets/img/ai_service/workbench-comments-bg1.jpg')
+}
+.zhengbao{
+    background-image: url('../../../assets/img/ai_service/workbench-comments-bg2.jpg')
+}

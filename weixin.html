@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="renderer" content="webkit">
+    <title>晓多微信个人助理</title>
+    <meta name="description" content="晓多微信个人助理">
+    <meta name="author" content="@fadequ">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <!-- core-->
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css?1480402787082">
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js?1480402787082"></script>
+    <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js?1480402787082"></script>
+    <!-- customize-->
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js?1480402787082"></script>
+    <link rel="stylesheet" href="//cdn.bootcss.com/ionicons/2.0.1/css/ionicons.min.css?1480402787082">
+    <link rel="stylesheet" href="./assets/css/styles.css?1480402787082">
+    <script>
+      var GLOBAL_ENV = '';
+      window.GLOBAL_ENV = GLOBAL_ENV;
+      
+    </script>
+    <style>
+      .affix{
+        background: none;
+        border: none;
+      }
+      
+      
+    </style>
+    <script type="text/javascript" src="./assets/lib/gallery/modernizr.custom.53451.js"></script>
+  </head>
+  <body class="home">
+    <header id="top" role="banner" data-spy="affix" data-offset-top="10" class="navbar navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header wx-header">
+          <button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="./" class="navbar-brand hide-text">小多科技</a>
+        </div>
+        <nav role="navigation" class="wx-header collapse navbar-collapse bs-navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/">首页</a></li>
+            <li><a target="_blank" href="https://cvd.xiaoduoai.com/passport/register">注册</a></li>
+            <li><a target="_blank" href="https://cvd.xiaoduoai.com/passport/">登录</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main id="content" role="main" class="home-page group weixin">
+      <div class="scan">
+        <div class="qrcode">
+          <div class="wrap"><img id="pQrcode" src="https://login.weixin.qq.com/qrcode/IfXPDcMmZw==" class="cover"></div>
+          <div class="refresh hide"> <span>您的二维码已经失效，请点击</span><a class="link"><span class="icon"></span><span>刷新</span></a></div>
+        </div>
+        <div class="guide">
+          <h2 class="title">登录晓多微信个人助理</h2>
+          <div class="h3">登录流程：</div>
+          <p>1.打开微信客服端。</p>
+          <p>2.通过右上角“+”→“扫一扫”，扫描左侧二维码。</p>
+          <p>3.在手机上点击确认登录。</p><a class="link">微信个人助理使用教程</a>
+        </div>
+      </div>
+      <div class="register hide">
+        <div class="hint">您好<span class="nick"></span>!您还没有注册晓多微信个人助理，快来注册领回家吧。</div>
+        <div class="form">
+          <div class="h3">注册微信个人助理</div>
+          <div class="row1">
+            <div class="lab">手机号</div>
+            <input class="input phone">
+          </div>
+          <div class="row1">
+            <div class="lab">设置密码</div>
+            <input type="password" class="input password">
+          </div>
+          <div class="row1 code"> 
+            <div class="lab">验证码</div>
+            <input class="input">
+          </div>
+          <div id="sendCode" class="send-btn btn">发送验证码</div>
+          <div class="row1">
+            <div id="reg" class="reg-btn btn">注册</div>
+          </div>
+        </div>
+      </div>
+      <div class="focus hide">
+        <h2 class="h2"> 
+          <div class="icon"> </div><span>开启成功</span>
+        </h2>
+        <h3 class="h3"> <span>已成功开启机器人，点击</span><a href="https://cvd-robot.xiaoduoai.com/#/" target="_blank" class="link">「机器人设置」</a><br><span>可自定义问题和回复</span></h3>
+        <div class="qrcode hide">
+          <div class="wrap"> <img src="./assets/img/cvd/qrcode.jpg" class="cover"></div>
+        </div>
+        <div class="guide hide">关注晓多对话助手公众号，自由开关，自定义问题和回复，so easy</div>
+        <div class="guide hide">玩转个人微信机器人&gt;<a class="link">教程点这里</a></div>
+      </div>
+      <div id="error" class="error hide"><span class="icon"> </span><span class="txt"> </span><span class="close"></span></div>
+    </main>
+    <footer role="contentinfo" class="page-footer">
+      <div class="container">
+        <div class="row footer-menu">
+          <ul class="footer-links text-muted text-center">
+            <li><a href="about.html">关于我们</a></li>
+            <li>·</li>
+            <li><a target="_blank" href="//blog.xiaoduoai.com">博客</a></li>
+            <li>·</li>
+            <li><a href="h`" target="_blank">招募精英</a></li>
+            <li>·</li>
+            <li><a href="contact.html">取得联系</a></li><li>·</li><li><a href="sitemap.xml">网站地图</a></li>
+          </ul>
+        </div>
+        <p class="copyright-information text-center">版權 © 2015-2017  成都小多科技有限公司<span class="hidden-xs">　　蜀 ICP 备 15004861 号</span></p>
+      </div>
+    </footer>
+    <!-- !Live Chat-->
+    <div id="floatTools" style="height:200px" class="rides-cs visible-md visible-lg J_openForCommitte">
+      <div class="floatL"><a id="aFloatTools_Show" title="查看在线客服" style="top:15px;display:block" href="javascript:void(0);" class="btnOpen">展开</a><a id="aFloatTools_Hide" title="关闭在线客服" style="top:15px;display:none" href="javascript:void(0);" class="btnCtn">收缩</a></div>
+      <div id="divFloatToolsView" style="display: none;height:187px;width: 120px;" class="floatR">
+        <div class="cn">
+          <h3 class="titZx">晓多在线客服</h3>
+          <ul>
+            <li><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=755322776&amp;site=qq&amp;menu=yes"><img border="0" src="//wpa.qq.com/pa?p=2:755322776:51" alt="点击这里给我发消息" title="点击这里给我发消息"></a></li>
+            <li><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=3148106652&amp;site=qq&amp;menu=yes"><img border="0" src="//wpa.qq.com/pa?p=2:3148106652:51" alt="点击这里给我发消息" title="点击这里给我发消息"></a></li>
+            <li><a target="_blank" class="J_openForCommitte"><img border="0" src="//amos1.taobao.com/online.ww?v=2&amp;uid=成都小多科技有限公司:枫叶&amp;s=1" alt="点击这里给我发消息" title="点击这里给我发消息"></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="//cdn.bootcss.com/es6-promise/3.2.1/es6-promise.min.js"></script>
+    <script src="//cdn.bootcss.com/moment.js/2.11.2/moment.min.js"></script>
+    <script>
+      $(document).ready(function($) {
+        var uuid = '';
+        var host ='https://cvd.xiaoduoai.com/';
+        var nick = '';
+        var uid = '';
+        var ticket = '';
+        var COOKIE_XD_CVD_UID        = '__XD_CVD_UID';
+        var COOKIE_XD_CVD_TICKET     = '__XD_CVD_TICKET';
+        var DOMAIN= 'xiaoduoai.com';
+        var PATH = '/';
+        var TIME =  3600 * 24; 
+        function setCookie(name,value,expires,path,domain){
+          var exp  = new Date();
+          exp.setTime(exp.getTime() + expires*1000);
+          document.cookie = name + "="+ escape (value) + ";expires=" + exp.toGMTString()+";domain="+domain+";path=/";
+        };  
+        function check(uuid){
+          var param ={uuid:uuid};
+          $.post(host + 'v1/wx/wx_login_check',param,function(res){
+            if(res && res.error_code == 0){
+              $('.scan').addClass('hide');
+              if(res.uid!=0){
+                $('.focus').removeClass('hide');
+              }else{
+                $('.register').removeClass('hide');
+                $('.phone')[0].focus();
+              }
+              nick = res && res.nick;
+            
+              setCookie(COOKIE_XD_CVD_UID,  res.uid, TIME, PATH, DOMAIN);
+              setCookie(COOKIE_XD_CVD_TICKET, res.ticket, TIME, PATH, DOMAIN); 
+              $('.nick').html(nick);
+      
+            }else{
+              $('.refresh').removeClass('hide');
+              $('#pQrcode').addClass('no-qrcode');
+            }
+            
+          },'json')
+        }
+        function bind(uid,ticket,uuid,unit_id){
+          var param ={uid:uid,ticket:ticket,uuid:uuid,unit_id:unit_id};
+          $.post(host + 'v1/wx/wx_bind',param,function(res){
+              _hmt.push(['_trackEvent', '微信个人助理登录', '绑定', '注册']);
+              $('.register').addClass('hide');
+              $('.focus').removeClass('hide');
+      
+          },'json')
+        }
+        function wxLogin(){
+          $.get(host + 'v1/wx/wx_login',function(res){
+            if(res && res.auth_url){
+              var qrcode = res.auth_url;
+              $('#pQrcode').attr('src',qrcode);
+              var auth_url  = res.auth_url;
+              auth_url = auth_url.split('qrcode/');
+              uuid = auth_url && auth_url[1];
+      
+              setTimeout(function(){
+                check(uuid)
+              },5000)
+              _hmt.push(['_trackEvent', '微信个人助理登录', '获取', '二维码']);
+            }
+          },'json')
+        }
+        function showError(str){
+          $('#error .txt').html(str);
+          $('#error').removeClass('hide');
+        }
+        $('.input').focus(function(){
+          $(this).parent('.row1').addClass('active');
+        })
+        $('.input').blur(function(){
+          $(this).parent('.row1').removeClass('active');
+        })
+        $('#error .close').click(function(){
+          $('#error').addClass('hide');
+        })
+        $('.refresh .link').click(function(){
+          wxLogin();
+          $('.refresh').addClass('hide');
+          $('#pQrcode').removeClass('no-qrcode');
+        })
+       
+        wxLogin();
+      
+      
+        $('#sendCode').click(function(){
+          var phone = $('.phone').val();
+          var dom = $(this);
+          phone = $.trim(phone);
+          if(!phone){
+            showError('请输入手机号');
+            return false;
+          }
+          if(!/^1[3-9]\d{9}$/.test(phone)){
+            showError('请输入正确手机号')
+            return false;
+          }
+          var param ={phone:phone,flag:'reg'};
+          if(dom.hasClass('active')){
+            return false;
+          }else{
+            dom.html('60秒后重发');
+            var n = 60;
+            var interval = setInterval(function(){
+              dom.html(n+'秒后重发');
+              n--;
+              if( n < 1){
+                dom.html('发送验证码');
+                dom.removeClass('active');
+                clearInterval(interval);
+              }
+            },1000);
+            dom.addClass('active');
+          }
+          $(this).addClass('active');
+          $.post(host + 'v1/auth/phone_auth',param,function(res){
+            _hmt.push(['_trackEvent', '微信个人助理登录', '发送验证码', '注册']);
+            if(res.error_code!=0){
+              showError(res.info)
+            }
+          },'json')
+        })
+        $('#reg').click(function(){
+          var phone = $('.phone').val();
+          phone = $.trim(phone);
+          if(!phone){
+            showError('请输入手机号');
+            return false;
+          }
+          if(!/^1[3-9]\d{9}$/.test(phone)){
+            showError('请输入正确手机号')
+            return false;
+          }
+          var password = $('.password').val();
+          password = $.trim(password);
+          if(!password){
+            showError('请输入密码');
+            return false;
+          }
+          if(password.length<6){
+            showError('密码不能少于6位');
+            return false;
+          }
+          if(password.length>30){
+            showError('密码不能大于30位');
+            return false;
+          }
+          var code = $('.code .input').val();
+          code = $.trim(code);
+          if(code && code.length < 4){
+            showError('验证码只能为4位')
+            return false
+          }
+          var param = {phone:phone,auth_code:code,password:password}
+          if($(this).hasClass('doing')){
+            return false;
+          }else{
+            $(this).addClass('doing');
+          }
+          $.post(host + 'v1/auth/reg',param,function(res){
+            if(res && res.error_code==0){
+              _hmt.push(['_trackEvent', '微信个人助理登录', '注册', '注册']);
+              var param = {uid:res.uid,ticket:res.ticket,account:phone,unit:'未设置'};
+              uid = res && res.uid;
+              ticket =  res && res.ticket;
+              $.post(host + 'v1/unit/add_unit',param,function(res){
+                if(res&&res.error_code==0){
+                  var unit_id = res.unit_id;
+                  bind(uid,ticket,uuid,unit_id)
+                }
+                $('#reg').removeClass('doing');
+               _hmt.push(['_trackEvent', '微信个人助理登录', '设置企业名称', '注册']);
+              },'json')
+              
+            }else{
+              $('#reg').removeClass('doing');
+              showError('注册失败，请重试')
+            }
+          },'json')
+        })
+      
+      });
+    </script>
+    <script src="./assets/js/scripts.js?ver=2.0.2"></script>
+    <script>
+      function openForCommitte() {
+        window.open("//cvd.xiaoduotech.com/?src=15&channel_id=12&key=1e3916388152882324dab168cddd44ee0153f89d8080ab5f73962122cb16caa6","client","top=30,left=500,width=520,height=570,location=null,menubar=0,scrollbars=0,status=0,toolbar=0,resizable=0")
+      }
+      
+    </script>
+    <script src="//cdn.bootcss.com/require.js/2.1.22/require.min.js" data-main="./scripts/app.js"></script>
+    <script>
+      require.config({
+        baseUrl: 'scripts',
+        paths: {
+          vue:'lib/vue/vue.min',
+          vueStrap:'lib/vue/vue-strap.min',
+          vueResource: 'lib/vue/vue-resource',
+          vuex: 'lib/vue/vuex',
+          vueRouter:'lib/vue/vue-router',
+          vueR:'utils/request',
+          R:'utils/request',
+          jquery: ['//cdn.bootcss.com/jquery/1.11.3/jquery.min'],
+          store:'flux/store',
+          actions:'flux/actions',
+        },
+        shim: {
+          'jquery-ui': {
+            deps: [ 'jquery' ],
+          }
+        }
+      });
+      
+      require(
+        ['vue',
+         'vueStrap',
+         'vueResource',
+         'vueR',
+         'vuex',
+         'vueRouter',
+         'store',
+         'actions'], function(Vue, VueStrap, VueResource, R, Vuex, Router, S, A) {
+      
+        Vue.use(Vuex)
+        Vue.use(VueResource)
+      
+        var emptyBase = Vue.extend({
+          name: 'Base',
+          template:
+            '<div class="current-area">' +
+              '<router-view></router-view>' + // <- 嵌套的外链
+            '</div>'
+        })
+      
+        if (!Vue.http.options.emulateJSON) {
+          Vue.http.options.emulateJSON = true
+        }
+      
+        // register the component
+        Object.keys(VueStrap).map(function(componentName) {
+          if(['select','option'].indexOf(componentName) > -1) {
+            componentName = "{:C('DB_PREFIX')}" + componentName;
+          }
+          Vue.component(componentName, VueStrap[componentName])
+          if( !window.hasOwnProperty(componentName) ) {
+            window[componentName] = VueStrap[componentName]
+          }
+        });
+      
+        Vue.directive('sticky', {
+            twoWay: true,
+            params: ["steps", "time"],
+            scrollSections: [],
+            release: function(){
+            },
+            fix: function(id){
+            },
+            init: function(){
+            },
+            bind: function(){
+              var doc = document
+              var self = this
+              var el = this.el
+              doc.addEventListener('scroll', this.scroll.bind(this))
+            },
+            scroll: function() {
+              var height = el.offsetHeight
+              var overIt = doc.body.scrollTop > el.offsetHeight
+              el.classList.toggle( "fixed", overIt );
+            },
+            update: function(newVar, oldVar) {
+            },
+            unbind: function() {
+                this.el.removeEventListener('scroll', this.scroll.bind(this))
+            },
+      
+        })
+      });
+      
+    </script>
+    <script id="cvd-demo-component" type="text/x-template"></script>
+    <div id="xd-chat-btn" v-cloak v-on:click="open()" v-bind:style="btnStyle"><span v-bind:class="{ 'ion-chatbubble' : !show , 'ion-chatbubble-working' : show }"></span></div>
+    <script>
+      require(['vue', 'vueR', 'actions'], function(Vue, R , A) {
+        var cvdDemo = new Vue({
+          el: '#xd-chat-btn',
+          data() {
+            let { search } = window.location
+            let btnStyle = {}
+            if(search.indexOf('?debug') === -1) {
+              btnStyle.display = 'none'
+            }
+      
+            return {
+                show: false,
+                btnStyle: btnStyle
+            }
+          },
+          ready() {
+          },
+          watch: {
+          },
+          methods: {
+            open() {
+                window.open("http://cvd.xiaoduoai.com/cvd_web_client/?src=晓多科技官网&tid=1234567&title=晓多科技官网","client","top=30,left=500,width=520,height=570,location=0,menubar=0,scrollbars=0,status=0,toolbar=0,resizable=0");
+            },
+      
+            close() {
+      
+            }
+          }
+        });
+      })
+    </script>
+    <!-- !growing IO-->
+<script type='text/javascript'>
+  var _vds = _vds || [];
+  window._vds = _vds;
+  (function(){
+    _vds.push(['setAccountId', '9630a117fa7499aa']);
+    (function() {
+      var vds = document.createElement('script');
+      vds.type='text/javascript';
+      vds.async = true;
+      vds.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'dn-growing.qbox.me/vds.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(vds, s);
+    })();
+  })();
+</script>
+<!-- !Baidu Analytics-->
+    <script>
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?7750cda9cae00b96d3e8c64913ca411e";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  </body>
+</html>

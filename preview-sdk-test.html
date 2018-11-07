@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=9">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <!-- endinject -->
+    <title>预览</title>
+    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+    <style type="text/css">
+      body{
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="text/javascript">
+
+      //获取url参数，并返回一个对象
+      function GetRequest() {
+        var url = location.search; //获取url中"?"符后的字串
+        var theRequest = new Object();
+        if (url.indexOf("?") != -1) {
+          var str = url.substr(1);
+          strs = str.split("&");
+          for (var i = 0; i < strs.length; i++) {
+            theRequest[strs[i].split("=")[0]] = decodeURIComponent(strs[i].split("=")[1]);
+          }
+        }
+        return theRequest;
+      }
+      var request = GetRequest();
+      var entry = request['entry'];
+      $(document).ready(function() {
+        var url = request['url'] ? request['url']:'http://www.xiaoduoai.com';
+        $('#app').html('<iframe id="iframe" src="'+url+'" frameBorder="0" scrolling="no" width="' + $(window).width() + 'px" height="' + $(window).height() + 'px"></iframe>')
+      });
+      window._cvd = [];
+      _cvd.push(['entry', entry]);
+      (function() {
+        var cvd = document.createElement('script');
+        cvd.type = 'text/javascript';
+        cvd.async = true;
+        cvd.defer = true;
+        cvd.src = '//cvd-test.xiaoduoai.com/sdk/sdk-a2b973c278.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(cvd, s);
+      })();
+
+    </script>
+  </body>
+</html>

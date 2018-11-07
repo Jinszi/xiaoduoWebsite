@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="8px" height="14px" viewBox="0 0 8 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12081) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-right@2x</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="btn" sketch:type="MSLayerGroup" transform="translate(-326.000000, -23.000000)">
+            <g id="icon-right" transform="translate(322.000000, 22.000000)" sketch:type="MSShapeGroup">
+                <rect id="bounds" x="0" y="0" width="16" height="16"></rect>
+                <path d="M9.3125,8 L4.09375,2.5625 C3.9270825,2.3958325 3.9270825,2.2291675 4.09375,2.0625 L5.03125,1.125 C5.21875094,0.9583325 5.38541594,0.947915937 5.53125,1.09375 L11.90625,7.75 C11.9687503,7.81250031 12,7.89583281 12,8 C12,8.10416719 11.9687503,8.18749969 11.90625,8.25 L5.53125,14.90625 C5.3645825,15.0729175 5.1979175,15.0729175 5.03125,14.90625 L4.09375,13.9375 C3.9270825,13.7708325 3.9270825,13.6041675 4.09375,13.4375 L9.3125,8 Z" id="shapes" fill="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>

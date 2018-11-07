@@ -1,0 +1,38 @@
+# Node.JS specifics
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+*.html~
+.css~
+
+ 
+
+npm-debug.log
+node_modules
+
+# MacOSX specifics
+.DS_Store
+
+# Build artifacts
+tmp
+bower_components
+ 
+
+# IDE specifics
+.idea
+*.sublime-*
+
+# temp files
+.tmp
+mock
+ossTools.js
+
+/* package files */
+*.zip
+*.tar.gz
+*.rar
